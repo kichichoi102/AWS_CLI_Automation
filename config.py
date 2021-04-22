@@ -12,7 +12,12 @@ keys = {
         "Email", 
         "Phishing", 
         "etc"
-    ]
+    ],
+
+    "domainName"        : "trial.onecourt.ca",
+    "callerReference"   : '',
+    "PRIVATEZONE"       : 'false',
+    "comment"           : ''
 }
 
 bin = {
@@ -23,7 +28,7 @@ bin = {
     "pricePos" : 0,
 
     "tag"      : False,
-    "tagPos"   : 0
+    "tagPos"   : 0,
 }
 
 
