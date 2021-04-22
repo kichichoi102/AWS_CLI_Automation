@@ -1,5 +1,6 @@
 import os
 import sys
+from subprocess import Popen
 from config import keys, bin
 
 '''
@@ -9,10 +10,6 @@ arg3: <bundle ID, string>
 arg4: <tags, list>
 '''
 
-def instanceNameFormatting(l):
-        str1 = " "
-        str1 = str1.join(l)
-        return str1
 
 # Change binaries if tags exist
 for i in range(len(sys.argv)):
@@ -29,15 +26,21 @@ for i in range(len(sys.argv)):
 
 instanceList = ''
 keyList = ''
+for i in range(len(keys["keyValue"])):
+        keyList = keyList + "key=" '"'  + keys["keyValue"][i] + '" '
 
 
 # Case 1: Default
 # Usage: python createInstance.py
 
+# --tags key="cfnoc" key="hello" key="tag3"
+
 if (bin["inst"] + bin["bund"] + bin["tag"]) == 0 and len(sys.argv) < 2:
     ''' Default case '''
-    cmd = "aws lightsail create-instances"  + " --instance-names " + keys["instanceName"] + " --availability-zone " + keys["AVAILIBILITY_ZONE"] + " --region " + keys["REGION"] + " --blueprint-id " + keys["BLUEPRINT_ID"] + " --bundle-id " + keys["bundleID"] + " --tags " + instanceNameFormatting(keys["keyValue"])
-    print(cmd)
+    cmd1 = "aws lightsail create-instances"  + " --instance-names " + keys["instanceName"] + " --availability-zone " + keys["AVAILIBILITY_ZONE"] + " --region " + keys["REGION"] + " --blueprint-id " + keys["BLUEPRINT_ID"] + " --bundle-id " + keys["bundleID"] + " --tags " + keyList
+    pStart = Popen(cmd1, shell=True)
+    pStart.wait()
+    # print(cmd1)
 
     # cmd1 = "aws lightsail --instance-names {0} {1} --available-zone {2}".format(var1, var2, var3)
 
@@ -76,15 +79,19 @@ elif (bin["inst"] + bin["bund"] + bin["tag"]) >= 1 and len(sys.argv) >= 3:
     # Case 5: Custom Key Values <-t>
     # Usage python createInstance.py -t CFNOC Sprint Email Phishing ...
 
+    # --tags key="cfnoc" key="hello" key="tag3"
+    
     if bin["tag"] == True:
-        for i in range(len(sys.argv) - (bin["tagPos"]+2)):
-            keyList = keyList + sys.argv[i+(bin["tagPos"]+1)] + ', '
-        keyList = keyList + sys.argv[len(sys.argv)-1]
+        keyList = ''
+        for i in range(len(sys.argv) - (bin["tagPos"]+1)):
+            keyList = keyList + "key=" '"'  + sys.argv[i+(bin["tagPos"]+1)] + '" '
 
     # Print out the cmd command
-    cmd = "aws lightsail create-instances"  + " --instance-names " + instanceList + " --availability-zone " + keys["AVAILIBILITY_ZONE"] + " --region " + keys["REGION"] + " --blueprint-id " + keys["BLUEPRINT_ID"] + " --bundle-id " + keys["bundleID"] + " --tags " + keyList
-    print(cmd)
-        
+    cmd1 = "aws lightsail create-instances"  + " --instance-names " + instanceList + " --availability-zone " + keys["AVAILIBILITY_ZONE"] + " --region " + keys["REGION"] + " --blueprint-id " + keys["BLUEPRINT_ID"] + " --bundle-id " + keys["bundleID"] + " --tags " + keyList
+    pStart = Popen(cmd1, shell=True)
+    pStart.wait()
+
+    # print(cmd1)
 
 
 else:

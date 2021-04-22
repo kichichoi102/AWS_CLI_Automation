@@ -22,13 +22,19 @@ keys = {
 
 bin = {
     "inst"    : False,
-    "namePos" : 0,
+    "instPos" : 0,
 
     "bund"     : False,
-    "pricePos" : 0,
+    "bundPos" : 0,
 
     "tag"      : False,
     "tagPos"   : 0,
+
+    "web"      : False,
+    "webPos"   : 0,
+
+    "comm"     : False,
+    "commPos"  : 0
 }
 
 
