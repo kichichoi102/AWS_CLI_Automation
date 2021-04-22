@@ -1,0 +1,18 @@
+{
+    "operations": [
+        {
+            "id": "7e19e8ae-0237-4c39-a94b-2419c4df6815",
+            "resourceName": "test1",
+            "resourceType": "Instance",
+            "createdAt": "2021-04-20T18:45:04.439000-04:00",
+            "location": {
+                "availabilityZone": "ca-central-1a",
+                "regionName": "ca-central-1"
+            },
+            "isTerminal": false,
+            "operationType": "CreateInstance",
+            "status": "Started",
+            "statusChangedAt": "2021-04-20T18:45:04.439000-04:00"
+        }
+    ]
+}

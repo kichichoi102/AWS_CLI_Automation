@@ -1,0 +1,24 @@
+Installation:
+$ python -m pip install --user awscli
+
+Configure:
+$ aws --version
+$ aws configure
+    access code
+    secret access code
+    region name: ca-central-1
+
+Create Instance:
+aws lightsail create-instances --region ca-central-1 --instance-names test1 --availability-zone ca-central-1a --blueprint-id ubuntu_20_04 --bundle-id nano_2_0
+
+
+
+# Create hosted zone Route53
+  create-hosted-zone
+--name <value>
+[--vpc <value>]
+--caller-reference <value>
+[--hosted-zone-config <value>]
+[--delegation-set-id <value>]
+[--cli-input-json <value>]
+[--generate-cli-skeleton <value>]
