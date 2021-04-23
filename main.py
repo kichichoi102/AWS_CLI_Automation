@@ -66,6 +66,7 @@ elif (bin["inst"] + bin["bund"] + bin["tag"]) >= 1 and len(sys.argv) >= 3:
 
     # Case 3: With instance name edits <-i>
     # Usage: python createInstance.py -i instance-1 instance-2 ...
+
     if bin["inst"] == True:
 
         if bin["bund"] == True:
@@ -75,10 +76,8 @@ elif (bin["inst"] + bin["bund"] + bin["tag"]) >= 1 and len(sys.argv) >= 3:
         else:
             vector = len(sys.argv)
 
-        for i in range(vector - (bin["instPos"]+2)):
-            instanceList = instanceList + sys.argv[i+2] + ', '
-        instanceList = instanceList + sys.argv[vector-1]
-        instanceList = '{' + instanceList + '}'
+        for i in range(vector - (bin["instPos"]+1)):
+            instanceList = instanceList + sys.argv[i+2] + ' '
 
     # Case 4: With Price bundle edit <-p>
     # Usage: python createInstance.py -p micro_2_0
@@ -115,6 +114,7 @@ elif (bin["inst"] + bin["bund"] + bin["tag"]) >= 1 and len(sys.argv) >= 3:
     cmd1 = "aws lightsail create-instances"  + " --instance-names " + instanceList + " --availability-zone " + keys["AVAILIBILITY_ZONE"] + " --region " + keys["REGION"] + " --blueprint-id " + keys["BLUEPRINT_ID"] + " --bundle-id " + keys["bundleID"] + " --tags " + keyList
     pStart = Popen(cmd1, shell=True)
     pStart.wait()
+    # print(cmd1)
 
 else:
     print("Refer to manual for usage or -help or -h")

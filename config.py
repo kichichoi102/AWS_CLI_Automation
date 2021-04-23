@@ -1,7 +1,7 @@
 keys = {
-    "instanceName"      : '{CFNOC-Sprint7-Email}',
-    "AVAILIBILITY_ZONE" : "ca-central-1a",
-    "REGION"            : "ca-central-1a",
+    "instanceName"      : 'CFNOC-Sprint7-Email',
+    "AVAILIBILITY_ZONE" : "us-east-2a",
+    "REGION"            : "us-east-2",
     "BLUEPRINT_ID"      : "ubuntu_20_04",
     "bundleID"          : "micro_2_0",
     

@@ -40,7 +40,7 @@ if (bin["inst"] + bin["bund"] + bin["tag"]) == 0 and len(sys.argv) < 2:
     cmd1 = "aws lightsail create-instances"  + " --instance-names " + keys["instanceName"] + " --availability-zone " + keys["AVAILIBILITY_ZONE"] + " --region " + keys["REGION"] + " --blueprint-id " + keys["BLUEPRINT_ID"] + " --bundle-id " + keys["bundleID"] + " --tags " + keyList
     pStart = Popen(cmd1, shell=True)
     pStart.wait()
-    # print(cmd1)
+    print(cmd1)
 
     # cmd1 = "aws lightsail --instance-names {0} {1} --available-zone {2}".format(var1, var2, var3)
 
@@ -65,10 +65,8 @@ elif (bin["inst"] + bin["bund"] + bin["tag"]) >= 1 and len(sys.argv) >= 3:
         else:
             vector = len(sys.argv)
 
-        for i in range(vector - (bin["namePos"]+2)):
-            instanceList = instanceList + sys.argv[i+2] + ', '
-        instanceList = instanceList + sys.argv[vector-1]
-        instanceList = '{' + instanceList + '}'
+        for i in range(vector - (bin["namePos"]+1)):
+            instanceList = instanceList + sys.argv[i+2] + ' '
 
     # Case 4: With Price bundle edit <-p>
     # Usage: python createInstance.py -p micro_2_0
@@ -91,7 +89,7 @@ elif (bin["inst"] + bin["bund"] + bin["tag"]) >= 1 and len(sys.argv) >= 3:
     pStart = Popen(cmd1, shell=True)
     pStart.wait()
 
-    # print(cmd1)
+    print(cmd1)
 
 
 else:
