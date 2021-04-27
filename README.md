@@ -18,7 +18,36 @@ aws configure
 3. Enter in the following. If you do not have access to the access keys, please get in touch with myself or the project owner.  
   a) Access Key ID,  
   b)	Secret Access Key,  
-  c)	Default region name: this should be ca-central-1  
+  c)	Default region name: this should be **ca-central-1**  
   d)	Default output format (I prefer json, but its up to the user)  
 
+## Installing git
+Ignore this step if you already have git installed on your machine.
+1. install:  
+'''bash
+sudo apt-get update
+sudo apt-get install git -y
+'''
+2. Configure your username (replace "First Last")  
+'''bash
+git config --global user.name "First Last"
+'''
+3. Configure your email (replace the email)  
+'''bash
+git config --global user.email "example@example.com"
+'''
 
+## Install the software
+1. Install:
+'''bash
+git clone https://github.com/kichichoi102/AWS_CLI_Automation.git
+'''
+2. Change directories
+'''bash
+cd ~/AWS_CLI_Automation
+'''
+3.	Occasionally use pull command to make sure your version is up to date!
+'''bash
+git pull https://github.com/kichichoi102/AWS_CLI_Automation.git master
+'''
+That’s all the steps. Open command and test if main.py works!
