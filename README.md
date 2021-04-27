@@ -4,12 +4,14 @@ This script is a set of functions to generate instances and hosted zones on AWS 
 ## Requirements
 There are no explicit package requirements for this software as all the packages used are native python and work with Unix based operating systems. However, AWS console installation is required.
 
-## AWS Console Installation:
+## Installation
+
+### AWS Console Installation:
 [AWS CLI Installation](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html#cliv2-linux-install/)  
 Follow the steps outlined in their docs. Can use either **curl** or download the **zip file**.  
 **IMPORTANT**: Please make sure to either update to the latest version or install it (Any version >= 2 is fine).
 
-## AWS Console Configuration
+### AWS Console Configuration
 1. Open the command line
 2. use the command:
 ```bash
@@ -21,7 +23,7 @@ aws configure
   c)	Default region name: this should be **ca-central-1**  
   d)	Default output format (I prefer json, but its up to the user)  
 
-## Installing git
+### Installing git
 Ignore this step if you already have git installed on your machine.
 1. install:  
 ```bash
@@ -37,7 +39,7 @@ git config --global user.name "First Last"
 git config --global user.email "example@example.com"
 ```
 
-## Install the software
+### Install the software
 1. Install:
 ```bash
 git clone https://github.com/kichichoi102/AWS_CLI_Automation.git
