@@ -12,9 +12,9 @@ Follow the steps outlined in their docs. Can use either **curl** or download the
 ## AWS Console Configuration
 1. Open the command line
 2. use the command:
-'''
+```bash
 aws configure
-'''
+```
 3. Enter in the following. If you do not have access to the access keys, please get in touch with myself or the project owner.  
   a) Access Key ID,  
   b)	Secret Access Key,  
@@ -24,30 +24,30 @@ aws configure
 ## Installing git
 Ignore this step if you already have git installed on your machine.
 1. install:  
-'''bash
+```bash
 sudo apt-get update
 sudo apt-get install git -y
-'''
+```
 2. Configure your username (replace "First Last")  
-'''bash
+```bash
 git config --global user.name "First Last"
-'''
+```
 3. Configure your email (replace the email)  
-'''bash
+```bash
 git config --global user.email "example@example.com"
-'''
+```
 
 ## Install the software
 1. Install:
-'''bash
+```bash
 git clone https://github.com/kichichoi102/AWS_CLI_Automation.git
-'''
+```
 2. Change directories
-'''bash
+```bash
 cd ~/AWS_CLI_Automation
-'''
+```
 3.	Occasionally use pull command to make sure your version is up to date!
-'''bash
+```bash
 git pull https://github.com/kichichoi102/AWS_CLI_Automation.git master
-'''  
+```
 That’s all the steps. Open command and test if main.py works!
