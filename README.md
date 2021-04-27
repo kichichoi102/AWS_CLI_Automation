@@ -67,3 +67,6 @@ python createInstance.py -i instance1 instance2 instance3 -p micro_2_0 -t tag1 t
 ```python
 python createHostedZone.py -w trial.onecourt.com -c test comment
 ```
+
+## Full Document
+[See Full Document here](https://drive.google.com/file/d/11oq92o08Wjav_fSqHv2T3HqGkYrxa6sx/view?usp=sharing)
