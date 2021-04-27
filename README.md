@@ -1,6 +1,9 @@
 # AWS_CLI_Automation
 This script is a set of functions to generate instances and hosted zones on AWS via automation of its CLI console.
 
+## Full Document
+[See Full Document here](https://drive.google.com/file/d/11oq92o08Wjav_fSqHv2T3HqGkYrxa6sx/view?usp=sharing)
+
 ## Requirements
 There are no explicit package requirements for this software as all the packages used are native python and work with Unix based operating systems. However, AWS console installation is required.
 
@@ -67,6 +70,3 @@ python createInstance.py -i instance1 instance2 instance3 -p micro_2_0 -t tag1 t
 ```python
 python createHostedZone.py -w trial.onecourt.com -c test comment
 ```
-
-## Full Document
-[See Full Document here](https://drive.google.com/file/d/11oq92o08Wjav_fSqHv2T3HqGkYrxa6sx/view?usp=sharing)
