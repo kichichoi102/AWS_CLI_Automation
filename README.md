@@ -15,10 +15,10 @@ Follow the steps outlined in their docs. Can use either **curl** or download the
 '''bash
 aws configure
 '''
-3. Enter in the following. If you do not have access to the access keys, please get in touch with myself or the project owner.
+3. Enter in the following. If you do not have access to the access keys, please get in touch with myself or the project owner.  
   a) Access Key ID,  
-b.	Secret Access Key, 
-c.	Default region name: this should be ca-central-1
-d.	Default output format (I prefer json, but its up to the user)
+  b)	Secret Access Key,  
+  c)	Default region name: this should be ca-central-1  
+  d)	Default output format (I prefer json, but its up to the user)  
 
 
