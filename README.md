@@ -49,5 +49,5 @@ cd ~/AWS_CLI_Automation
 3.	Occasionally use pull command to make sure your version is up to date!
 '''bash
 git pull https://github.com/kichichoi102/AWS_CLI_Automation.git master
-'''
+'''  
 That’s all the steps. Open command and test if main.py works!
