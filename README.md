@@ -2,7 +2,7 @@
 This script is a set of functions to generate instances and hosted zones on AWS via automation of its CLI console.
 
 ## Full Document
-[See Full Document here](https://drive.google.com/file/d/11oq92o08Wjav_fSqHv2T3HqGkYrxa6sx/view?usp=sharing)
+[See Full Document here](https://drive.google.com/file/d/11oq92o08Wjav_fSqHv2T3HqGkYrxa6sx/view?usp=sharing) for a more detailed end-user manual.
 
 ## Requirements
 There are no explicit package requirements for this software as all the packages used are native python and work with Unix based operating systems. However, AWS console installation is required.
