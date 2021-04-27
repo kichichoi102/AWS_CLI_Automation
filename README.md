@@ -12,7 +12,7 @@ Follow the steps outlined in their docs. Can use either **curl** or download the
 ## AWS Console Configuration
 1. Open the command line
 2. use the command:
-'''bash
+'''
 aws configure
 '''
 3. Enter in the following. If you do not have access to the access keys, please get in touch with myself or the project owner.  
