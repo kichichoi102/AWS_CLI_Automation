@@ -53,3 +53,17 @@ cd ~/AWS_CLI_Automation
 git pull https://github.com/kichichoi102/AWS_CLI_Automation.git master
 ```
 That’s all the steps. Open command and test if main.py works!
+
+## Usage
+### main.py
+```python
+python main.py -i instance1 instance2 instance3 -p micro_2_0 -t tag1 tag2 tag3 -w trial.onecourt.com -c test comment
+```
+### createInstance.py
+```python
+python createInstance.py -i instance1 instance2 instance3 -p micro_2_0 -t tag1 tag2 tag3
+```
+### createHostedZone.py
+```python
+python createHostedZone.py -w trial.onecourt.com -c test comment
+```
