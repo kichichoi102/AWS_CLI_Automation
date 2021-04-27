@@ -56,7 +56,7 @@ That’s all the steps. Open command and test if main.py works!
 
 ## Usage
 ### main.py
-```python
+```bash
 python main.py -i instance1 instance2 instance3 -p micro_2_0 -t tag1 tag2 tag3 -w trial.onecourt.com -c test comment
 ```
 ### createInstance.py
