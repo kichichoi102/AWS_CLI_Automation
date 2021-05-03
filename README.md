@@ -62,6 +62,7 @@ That’s all the steps. Open command and test if main.py works!
 ```python
 python main.py -i instance1 instance2 instance3 -p micro_2_0 -t tag1 tag2 tag3 -w trial.onecourt.com -c test comment
 ```
+This creates three instances named: instance1 instance2 instance3, makes the price tag the $5 bundle, associated tags: tag1, tag2, tag3, hosted website: trial.onecourt.ca, and test comment for the hosted website.
 ### createInstance.py
 ```python
 python createInstance.py -i instance1 instance2 instance3 -p micro_2_0 -t tag1 tag2 tag3
