@@ -102,16 +102,17 @@ elif (bin["inst"] + bin["bund"] + bin["tag"]) >= 1:
                 keyList = keyList + "key=" '"'  + sys.argv[i+(bin["tagPos"]+1)] + '" '
 
     cmd1 = "aws lightsail create-instances"  + " --instance-names " + instanceList + " --availability-zone " + keys["AVAILIBILITY_ZONE"] + " --region " + keys["REGION"] + " --blueprint-id " + keys["BLUEPRINT_ID"] + " --bundle-id " + keys["bundleID"] + " --tags " + keyList
-    
-    # Run cmd1/Debug
 
-    pStart = Popen(cmd1, shell=True)
-    pStart.wait()
-    # print(cmd1)
 
 else:
     print("Refer to manual for usage ")
     print("Usage: python createInstance.py -i <instance name> -p <bundleID> -t <tags>")
+
+# Run cmd1/Debug
+
+pStart = Popen(cmd1, shell=True)
+pStart.wait()
+# print(cmd1)
 
 # Case 5: default domain name and commment
 
