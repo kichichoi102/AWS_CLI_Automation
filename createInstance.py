@@ -24,6 +24,7 @@ for i in range(len(sys.argv)):
         bin["tag"] = True
 
 
+# Initial Variables
 instanceList = ''
 keyList = ''
 for i in range(len(keys["keyValue"])):
@@ -38,30 +39,20 @@ for i in range(len(keys["keyValue"])):
 if (bin["inst"] + bin["bund"] + bin["tag"]) == 0 and len(sys.argv) < 2:
     ''' Default case '''
     cmd1 = "aws lightsail create-instances"  + " --instance-names " + keys["instanceName"] + " --availability-zone " + keys["AVAILIBILITY_ZONE"] + " --region " + keys["REGION"] + " --blueprint-id " + keys["BLUEPRINT_ID"] + " --bundle-id " + keys["bundleID"] + " --tags " + keyList
-    pStart = Popen(cmd1, shell=True)
-    pStart.wait()
-    print(cmd1)
-
-    # cmd1 = "aws lightsail --instance-names {0} {1} --available-zone {2}".format(var1, var2, var3)
-
-# Case 2: Help function.
-# Usage: python createInstance.py -h
-
-elif sys.argv[1] == "-h":
-    ''' help function '''
-    print("help function here")
-
 
 elif (bin["inst"] + bin["bund"] + bin["tag"]) >= 1 and len(sys.argv) >= 3:
 
     # Case 3: With instance name edits <-i>
     # Usage: python createInstance.py -i instance-1 instance-2 ...
+
     if bin["inst"] == True:
 
         if bin["bund"] == True:
             vector = bin["pricePos"]
         elif bin["tag"] == True:
             vector = bin["tagPos"]
+        elif (bin["tag"] and bin["bund"]) == True:
+            vector = bin["pricePos"]
         else:
             vector = len(sys.argv)
 
@@ -83,22 +74,14 @@ elif (bin["inst"] + bin["bund"] + bin["tag"]) >= 1 and len(sys.argv) >= 3:
         keyList = ''
         for i in range(len(sys.argv) - (bin["tagPos"]+1)):
             keyList = keyList + "key=" '"'  + sys.argv[i+(bin["tagPos"]+1)] + '" '
-
-    # Print out the cmd command
     cmd1 = "aws lightsail create-instances"  + " --instance-names " + instanceList + " --availability-zone " + keys["AVAILIBILITY_ZONE"] + " --region " + keys["REGION"] + " --blueprint-id " + keys["BLUEPRINT_ID"] + " --bundle-id " + keys["bundleID"] + " --tags " + keyList
-    pStart = Popen(cmd1, shell=True)
-    pStart.wait()
-
-    print(cmd1)
-
 
 else:
     print("Refer to manual for usage or -help or -h")
     print("Usage: python createInstance.py -i <instance name> -p <bundleID> -t <tags>")
 
+# Run command/debug
+pStart = Popen(cmd1, shell=True)
+pStart.wait()
 
-
-
-
-# if __name__ == "__main__":
-#     createInstance(keys)
+# print(cmd1)
