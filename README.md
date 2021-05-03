@@ -1,8 +1,8 @@
 # AWS_CLI_Automation
 This script is a set of functions to generate instances and hosted zones on AWS via automation of its CLI console.  
 
-## Update:  
-Logic flaws fixed.  
+## Latest Update  
+**May 3rd** Logic flaws fixed.  
 
 ## Full Document
 [See Full Document here](https://drive.google.com/file/d/11oq92o08Wjav_fSqHv2T3HqGkYrxa6sx/view?usp=sharing) for a more detailed end-user manual.
